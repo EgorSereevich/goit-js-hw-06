@@ -13,12 +13,9 @@ const images = [
   },
 ];
 const listEl = document.querySelector(".gallery");
-// const itemEl = document.createElement("li");
-// const imgEl = document.createElement("img");
-
-// itemEl.insertAdjacentHTML("beforeend", imgEl);
 const itemEl = images
-  .map((item) => `<li class="item" ><img src=${item.url}></li>`)
+  .map((item) => `<li><img src=${item.url} alt=${item.alt} /></li>`)
   .join("");
-// listEl.insertAdjacentHTML("beforeend", itemEl);
 listEl.insertAdjacentHTML("beforeend", itemEl);
+listEl.style.display = "flex";
+listEl.style.gap = "20px";

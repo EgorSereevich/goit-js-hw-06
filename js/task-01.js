@@ -5,6 +5,6 @@ const itemEl = document.querySelectorAll(".item");
 itemEl.forEach(function (item) {
   const itemTitleEl = item.querySelector("h2");
   console.log(`Category: ${itemTitleEl.textContent}`);
-  const listItemEl = item.querySelectorAll("ul > li");
+  const listItemEl = item.querySelectorAll("li");
   console.log(`Elements: ${listItemEl.length}`);
 });
