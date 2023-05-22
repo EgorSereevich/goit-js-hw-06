@@ -9,14 +9,15 @@ function onFormSubmit(event) {
 
   if (
     event.currentTarget.elements.password.value === "" ||
-    eevent.currentTarget.elements.email.value === ""
+    event.currentTarget.elements.email.value === ""
   ) {
     alert("Усі поля повинні бути заповнені!!!");
   } else {
-    formData.forEach((value, name) => {
-      const element = [...formData];
-      console.log(element);
-    });
+    const objekt = {
+      email: event.currentTarget.elements.email.value,
+      password: event.currentTarget.elements.password.value,
+    };
+    console.log(objekt);
   }
 
   event.target.reset();
